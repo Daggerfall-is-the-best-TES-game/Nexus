@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="com.meti.app.server.ServerDisplay">
+    <children>
+        <BorderPane prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Connection">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#openProperties" text="Properties"/>
+                                <MenuItem mnemonicParsing="false" onAction="#shutdown" text="Shutdown"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#addFiles" text="Add Files"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#openProblem" text="Have a Problem?"/>
+                                <MenuItem mnemonicParsing="false" onAction="#openWebsite" text="Website"/>
+                                <MenuItem mnemonicParsing="false" onAction="#openGitHub" text="GitHub"/>
+                                <MenuItem mnemonicParsing="false" onAction="#openDocumentation" text="Documentation"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <left>
+                <TitledPane text="Clients Online">
+                    <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="736.0"
+                                    prefViewportWidth="200.0">
+                            <content>
+                                <ListView fx:id="clientView" prefHeight="200.0" prefWidth="200.0"
+                                          BorderPane.alignment="CENTER"/>
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </TitledPane>
+            </left>
+            <center>
+                <TitledPane text="Console">
+                    <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="736.0"
+                                    prefViewportWidth="624.0">
+                            <content>
+                                <TextArea fx:id="console" prefHeight="200.0" prefWidth="200.0"
+                                          BorderPane.alignment="CENTER"/>
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </TitledPane>
+            </center>
+            <right>
+                <TitledPane text="Chat">
+                    <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="736.0"
+                                    prefViewportWidth="200.0">
+                            <content>
+                                <TextArea fx:id="chat" prefHeight="200.0" prefWidth="200.0"
+                                          BorderPane.alignment="CENTER"/>
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </TitledPane>
+            </right>
+            <bottom>
+                <TitledPane text="Files">
+                    <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="200.0"
+                                    prefViewportWidth="1030.0">
+                            <content>
+                                <TreeView fx:id="fileView" prefHeight="200.0" prefWidth="200.0"
+                                          BorderPane.alignment="CENTER"/>
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </TitledPane>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

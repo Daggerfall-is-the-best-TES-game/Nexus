@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.testfx:testfx-internal-java8:4.0.10-alpha">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testfx/testfx-internal-java8/4.0.10-alpha/6082781817e4492a7ff65de65a8ee3a79407ef5b/testfx-internal-java8-4.0.10-alpha.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testfx/testfx-internal-java8/4.0.10-alpha/10089c65f35146d170a7eda8aa18ebd6553ae251/testfx-internal-java8-4.0.10-alpha-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

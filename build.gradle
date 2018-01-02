@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'com.meti.app.Main'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.0'
+    testCompile "org.testfx:testfx-junit5:4.0.10-alpha"
+}
+
+jar {
+    manifest {
+        attributes 'Startup-Class': mainClassName
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
